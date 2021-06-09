@@ -1,3 +1,4 @@
+import 'package:client/generate_report_form.dart';
 import 'package:client/models/patient_list_object_model.dart';
 import 'package:client/resources/api_provider.dart';
 import 'package:client/resources/helper.dart';
@@ -116,7 +117,16 @@ class _PatientsScreenState extends State<PatientsScreen> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
                                     TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      GenerateReportForm(
+                                                        patient:
+                                                            patients[index],
+                                                      )));
+                                        },
                                         child: const Text(
                                           'generate report',
                                           style: TextStyle(
