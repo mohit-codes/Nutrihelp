@@ -58,7 +58,7 @@ class DashBoardScreen extends StatelessWidget {
       },
       () async {
         final SharedPreferences isLogin = await SharedPreferences.getInstance();
-        isLogin.setBool('login', false);
+        isLogin.remove('login');
         isLogin.remove('userId');
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const LoginScreen()));

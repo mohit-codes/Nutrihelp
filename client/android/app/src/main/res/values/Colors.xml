@@ -1,0 +1,5 @@
+<resources>
+    <color name="gradient_start">#A6E97C</color>
+    <color name="gradient_center">#CBEEB6</color>
+    <color name="gradient_end">#F1F4EF</color>
+</resources>
